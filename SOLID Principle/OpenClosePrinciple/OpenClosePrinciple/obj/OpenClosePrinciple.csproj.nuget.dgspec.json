@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Learning_Programming\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Learning_Programming\\Programming_Patterns_Principles\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Learning_Programming\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Learning_Programming\\Programming_Patterns_Principles\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\Programming_Patterns_Principles\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj",
         "projectName": "OpenClosePrinciple",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\Programming_Patterns_Principles\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\OpenClosePrinciple.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Learning_Programming\\Programming_Patterns_Principles\\SOLID Principle\\OpenClosePrinciple\\OpenClosePrinciple\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

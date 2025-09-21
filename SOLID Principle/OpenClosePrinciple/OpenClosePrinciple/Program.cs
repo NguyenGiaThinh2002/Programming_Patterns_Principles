@@ -3,12 +3,14 @@
     internal class Program
     {
         // Define an interface for shapes
+        // OCP: Defines abstraction so we can extend the system with new shapes
+        // without modifying existing code.
         public interface IShape
         {
             double CalculateArea();
         }
 
-        // Concrete implementations of shapes
+        // Concrete implementations of shapes (extensions, no modification needed)
         public class Rectangle : IShape
         {
             public double Width { get; set; }
@@ -44,6 +46,8 @@
         // Area calculator that works with any IShape
         public class AreaCalculator
         {
+            // OCP: Closed for modification (this code never changes),
+            // Open for extension (new shapes can be added via IShape).
             public double CalculateArea(IShape shape)
             {
                 return shape.CalculateArea();
@@ -63,4 +67,5 @@
             Console.WriteLine($"Triangle Area: {calculator.CalculateArea(triangle)}");    // Output: 12
         }
     }
+
 }

@@ -1,0 +1,34 @@
+﻿++ The Liskov Substitution Principle (LSP) is one of the five SOLID principles of object-oriented design, 
+introduced by Barbara Liskov. 
+- It states that objects of a derived class should be able to replace objects of the base class 
+without introducing errors or unexpected behavior in the system. 
+- In other words, a subclass should be substitutable for its base class 
+without altering the correctness of the program.
+
+++ Key Concepts of LSP
+- Substitutability: If a program is designed to work with a base class (or interface), 
+it should work correctly with any derived class (or implementation) without requiring changes or causing errors.
+- Behavioral Compatibility: Subclasses must adhere to the expected behavior of the base class, 
+honoring its contract (preconditions, postconditions, and invariants).
+- Goal: Ensure that inheritance hierarchies are designed in a way that derived classes 
+extend the base class meaningfully, maintaining the system's reliability and predictability.
+
+In C#, LSP is critical when using inheritance or implementing interfaces to ensure 
+that derived types can be used interchangeably with their base types.
+
+++ Real-World Example
+- Consider a payment processing system with a PaymentProcessor base class and derived classes like 
+CreditCardProcessor and GiftCardProcessor. 
+- If GiftCardProcessor violates LSP by requiring a different validation process that breaks the base class’s contract 
+(e.g., requiring a PIN that credit cards don’t need), substituting GiftCardProcessor for PaymentProcessor 
+could cause errors. 
+- To fix this, define an IPaymentProcessor interface with a clear contract, 
+and ensure all implementations adhere to it.
+
+++ Caveats and Considerations
+- Over-Splitting Abstractions: Creating too many interfaces or classes to avoid LSP violations 
+can lead to overcomplicated designs.
+- Design Trade-offs: Balancing LSP with other SOLID principles (like OCP) requires careful thought 
+to avoid unnecessary complexity.
+- Testing: Subclasses should be tested to ensure they meet the base class’s contract, 
+especially for critical behaviors.

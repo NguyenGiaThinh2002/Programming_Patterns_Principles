@@ -1,0 +1,26 @@
+﻿++ The Single Responsibility Principle (SRP) is the first of the five SOLID principles of object-oriented design, 
+introduced by Robert C. Martin. 
+- It states that a class should have only one reason to change, 
+meaning that a class should have a single responsibility or purpose. 
+- Each Trades, this principle ensures that classes are focused, cohesive, and easier to maintain by 
+limiting their scope to one specific function.
+++ Key Concepts of SRP
+- Single Responsibility: A class should be responsible for only one aspect of the system’s functionality, 
+such as business logic, data persistence, or user interface rendering.
+- Reason to Change: A class should change only when its specific responsibility needs to be modified, 
+not because of unrelated concerns.
+- Goal: Create modular, maintainable, and understandable code by ensuring each class has a clear, singular purpose.
+
+In C#, SRP is applied by designing classes that handle one specific task, 
+avoiding the temptation to make classes handle multiple unrelated responsibilities.
+
+++ Real-World Example
+- Consider a UserManager class that handles user authentication, user data storage, 
+and user profile updates. 
+- This violates SRP because authentication, storage, and profile management are separate concerns. 
+++ To adhere to SRP, you could create:
+- UserAuthenticator: Handles login and authentication logic.
+- UserRepository: Manages user data persistence.
+- UserProfileService: Updates user profile information.
+
+Each class focuses on one responsibility, making the system easier to modify and test.

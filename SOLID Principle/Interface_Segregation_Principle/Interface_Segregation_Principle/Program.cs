@@ -11,10 +11,8 @@
             manager.AssignWork(human); // Works: "Human is working"
             manager.AssignWork(robot); // Works: "Robot is working"
             manager.ProvideLunch(human); // Works: "Human is eating"
-                                         // manager.ProvideLunch(robot); // Won't compile: Robot doesn't implement IEatable
+            // manager.ProvideLunch(robot); // Won't compile: Robot doesn't implement IEatable
         }
-
-        
 
         public interface IWorkable
         {

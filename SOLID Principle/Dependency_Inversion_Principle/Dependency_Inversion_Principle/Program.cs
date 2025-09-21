@@ -8,17 +8,20 @@
             ILogger databaseLogger = new DatabaseLogger();
 
             var processor1 = new OrderProcessor(fileLogger);
-            processor1.ProcessOrder(); // Output: Writing to file: Processing order... \n Order processed.
+            processor1.ProcessOrder();
 
             var processor2 = new OrderProcessor(databaseLogger);
-            processor2.ProcessOrder(); // Output: Writing to database: Processing order... \n Order processed.
+            processor2.ProcessOrder();
         }
 
+        // DIP: Abstraction that both high-level (OrderProcessor)
+        // and low-level (loggers) depend on.
         public interface ILogger
         {
             void Log(string message);
         }
 
+        // Low-level module depends on abstraction (ILogger), not on OrderProcessor.
         public class FileLogger : ILogger
         {
             public void Log(string message)
@@ -27,6 +30,7 @@
             }
         }
 
+        // Another low-level module depending on abstraction (ILogger).
         public class DatabaseLogger : ILogger
         {
             public void Log(string message)
@@ -39,16 +43,20 @@
         {
             private readonly ILogger _logger;
 
-            public OrderProcessor(ILogger logger) // Dependency injected via constructor
+            // DIP: High-level module depends on abstraction (ILogger),
+            // not on concrete classes like FileLogger or DatabaseLogger.
+            // Dependency is injected from outside.
+            public OrderProcessor(ILogger logger)
             {
                 _logger = logger;
             }
 
             public void ProcessOrder()
             {
-                _logger.Log("Processing order...");
+                _logger.Log("Processing order..."); // Uses abstraction
                 Console.WriteLine("Order processed.");
             }
         }
     }
+
 }
